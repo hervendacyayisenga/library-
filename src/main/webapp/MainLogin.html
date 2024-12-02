@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>LOGIN PAGE</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form method="POST" action="LoginServlet">
+                <h1>Librarian Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your Credentials for Login</span>
+
+                <!-- Username input -->
+                 <input type="text" id="username" name="username" required>
+
+                <!-- Password input -->
+                 <input type="password" id="password" name="password" required>
+
+                <!-- Role selection -->
+                <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="LIBRARIAN">Librarian</option>
+             <option value="MANAGER">Manager</option>
+                </select>
+                   <!-- Submit button -->
+           <button type="submit">Sign In Librarian</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form method="POST" action="LoginServlet">
+                <h1>Login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your  Credentials to Login</span>
+
+              <input type="text" id="username" name="username" required>
+
+                <!-- Password input -->
+               <input type="password" id="password" name="password" required>
+
+                <!-- Role selection -->
+                 <select id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="STUDENT">Student</option>
+                    <option value="MANAGER">Manager</option>
+                    <option value="TEACHER">Teacher</option>
+                    <option value="DEAN">Dean</option>
+                    <option value="HOD">Head of Department</option>
+                    <option value="LIBRARIAN">Librarian</option>
+                </select>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome to Librarian Portal!</h1>
+                    <p>To AUCA Library Management System</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Please Login to AUCA Library Management System</p>
+                    <button class="hidden" id="register">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>

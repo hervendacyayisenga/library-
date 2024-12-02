@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrower Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color:  #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a67d8;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #5a67d8;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Borrower Registration</h2>
+        <form action="BorrowerServlet" method="POST">
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" required>
+
+            <label for="fineAmount">Fine Amount:</label>
+            <input type="text" id="fineAmount" name="fineAmount">
+
+            <label for="borrowDate">Borrow Date:</label>
+            <input type="date" id="borrowDate" name="borrowDate" required>
+
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <input type="submit" value="Register Borrower">
+        </form>
+        <a class="back-link" href="personUserForm.html">Back to User Form</a>
+    </div>
+</body>
+</html>

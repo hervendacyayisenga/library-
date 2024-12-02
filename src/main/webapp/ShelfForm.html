@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 16px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Shelf Management</h2>
+    <form action="Submit-shelf" method="post">
+        <div class="form-group">
+            <label for="availableStock">Available Stock</label>
+            <input type="number" id="availableStock" name="availableStock" placeholder="Enter available stock" required>
+        </div>
+        <div class="form-group">
+            <label for="bookCategory">Book Category</label>
+            <input type="text" id="bookCategory" name="bookCategory" placeholder="Enter book category" required>
+        </div>
+        <div class="form-group">
+            <label for="borrowedNumber">Borrowed Number</label>
+            <input type="number" id="borrowedNumber" name="borrowedNumber" placeholder="Enter number of borrowed books" required>
+        </div>
+        <div class="form-group">
+            <label for="initialStock">Initial Stock</label>
+            <input type="number" id="initialStock" name="initialStock" placeholder="Enter initial stock" required>
+        </div>
+        <div class="form-group">
+            <label for="room">Room</label>
+            <select id="room" name="room" required>
+                <option value="">Select Room</option>
+                <option value="1">Room 1</option>
+                <option value="2">Room 2</option>
+                <option value="3">Room 3</option>
+                <!-- Add more rooms as needed -->
+            </select>
+        </div>
+        <button type="submit">Submit Shelf Data</button>
+        <a href="LibrarianHomePage.jsp" class="back-link">Back to Home</a>
+    </form>
+</div>
+
+</body>
+</html>

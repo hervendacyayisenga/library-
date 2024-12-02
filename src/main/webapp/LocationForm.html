@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Location Registration</h2>
+        <form action="locationServlet" method="POST">
+        
+            <label for="locationCode">Location Code:</label>
+            <input type="text" id="locationCode" name="locationCode" required>
+
+            <label for="locationName">Location Name:</label>
+            <input type="text" id="locationName" name="locationName" required>
+
+            <label for="province">Province:</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required>
+
+            <label for="sector">Sector:</label>
+            <input type="text" id="sector" name="sector" required>
+
+            <label for="cell">Cell:</label>
+            <input type="text" id="cell" name="cell" required>
+
+            <label for="village">Village:</label>
+            <input type="text" id="village" name="village" required>
+
+            <input type="submit" value="Register Location">
+        </form>
+        <a class="back-link" href="MemberAccess.jsp">Back to Home</a>
+    </div>
+</body>
+</html>
